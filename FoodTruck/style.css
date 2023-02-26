@@ -85,20 +85,21 @@ p {
     margin: 0 10px;
   }
 
-  #hero_cta, h2, .gallary_thumbnail {
-    margin-top: 20px;
+  #hero_cta, h2, .gallery_thumbnail {
+    margin-top: 20px;text-align: center
   }
 
-  #hero_cta, h2 {
-    text-align: center;
+  #hero_cta {
+    background-image: url("img/food_truck_hero");
+    background-size: cover;
   }
 
-  .scroll_galary {
-    flex-direction: column;
+  .scroll_gallery {
+    flex-direction: row;
     align-items: center;
   }
 
-  .gallary_thumbnail {
+  .gallery_thumbnail {
     margin-bottom: 20px;
   }
 }
@@ -106,7 +107,7 @@ p {
 /* Page-specific styles */
 #hero {
   height: 500px;
-  background-image: url('https://via.placeholder.com/500');
+  background-image: url('img/food_truck_hero.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -119,18 +120,19 @@ p {
   height: 300px;
   background-color: #4ECDC4;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.scroll_galary {
+#scroll_gallery {
   height: 500px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
-.gallary_thumbnail {
+.gallery_thumbnail {
   height: 200px;
   width: 200px;
   background-image: url('https://via.placeholder.com/200');
@@ -152,13 +154,23 @@ footer {
 /* Directory page */
 #directory_title {
   text-align: center;
+  display: flex
+}
+
+#directory-card-wrapper{
+  margin: 300px;
+}
+
+#directory-card-info {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .directory_card {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center
 }
 
 .truck_pics {
@@ -166,3 +178,30 @@ footer {
   width: 200px;
   margin-right: 20px;
   background-image: url('https://via.placeholder.com/200')
+
+  #directory-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .truck-directory-card-thumbnails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px; /* Add some space between thumbnails and main image */
+  }
+
+  .sm-thumbnail-img {
+    display: flex;
+    margin-bottom: 5px; /* Add some space between thumbnails */
+    margin-top: 10px;
+  }
+
+  .truck-directory-card-main-image {
+     /* Add some space between thumbnails and main image */
+  }
+
+  tr:first-child {
+    border-bottom: 5px solid black;
+  }
